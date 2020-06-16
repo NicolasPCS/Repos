@@ -1,10 +1,27 @@
-#include "Header.h"
+#include "tCientifico.h"
 #include <iostream>
 using namespace std;
 
 int main() {
-	alumnoIntercambio nuevo("34567", "Nicolas", 12, "3456", 3, "PEru");
-	nuevo.mostrarAI();
-	nuevo.ingresarAI();
-	nuevo.mostrarAI();
+	tCientifico nuevo("Revista iberoamericana", "2345678", "Publicaciones", "6ta edicion",
+        "Analisis de..", "Nombre autor");
+	nuevo.ingresarA();
+	nuevo.mostrarA();
+}
+
+
+#include <iostream>
+using namespace std;
+class Publicacion {
+public: int x;
+      friend Publicacion& operator++(Publicacion&);
+      friend Publicacion& operator--(Publicacion&);
+};
+Publicacion& operator++ (Publicacion& e) {
+    e.x = e.x + e.x;
+    return e;
+}
+Publicacion& operator-- (Publicacion& e) {
+    e.x = e.x / 2;
+    return e;
 }
