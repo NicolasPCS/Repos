@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{A72A960F-F6EE-4053-91B2-1A6898D34A5F}</ProjectGuid>
-    <RootNamespace>SistemaBiblioteca</RootNamespace>
+    <ProjectGuid>{920DD265-8CE4-4AA6-A4C9-0939CCE7A769}</ProjectGuid>
+    <RootNamespace>SistemaBiblioteca2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -138,24 +138,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\source\repos\BiblioPractica6\Alumnos.h" />
-    <ClInclude Include="..\..\..\..\source\repos\BiblioPractica6\devolver.h" />
-    <ClInclude Include="..\..\..\..\source\repos\BiblioPractica6\FriendsA.h" />
-    <ClInclude Include="..\..\..\..\source\repos\BiblioPractica6\FriendsL.h" />
-    <ClInclude Include="..\..\..\..\source\repos\BiblioPractica6\Libros.h" />
-    <ClInclude Include="..\..\..\..\source\repos\BiblioPractica6\Persona.h" />
-    <ClInclude Include="Sector1.h" />
+    <ClCompile Include="Alumnos.cpp" />
+    <ClCompile Include="Libros.cpp" />
+    <ClCompile Include="Persona.cpp" />
+    <ClCompile Include="Sector.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\source\repos\BiblioPractica6\Alumnos.cpp" />
-    <ClCompile Include="..\..\..\..\source\repos\BiblioPractica6\devolver.cpp" />
-    <ClCompile Include="..\..\..\..\source\repos\BiblioPractica6\Libros.cpp" />
-    <ClCompile Include="..\..\..\..\source\repos\BiblioPractica6\Persona.cpp" />
-    <ClCompile Include="..\..\..\..\source\repos\BiblioPractica6\Source.cpp" />
-    <ClCompile Include="Sector1.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClInclude Include="Alumnos.h" />
+    <ClInclude Include="FriendsA.h" />
+    <ClInclude Include="FriendsL.h" />
+    <ClInclude Include="Libros.h" />
+    <ClInclude Include="Persona.h" />
+    <ClInclude Include="Sector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

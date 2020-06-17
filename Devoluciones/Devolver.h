@@ -1,17 +1,13 @@
 /////////////////////////////
 //////////devolver.h/////////
 /////////////////////////////
-
 #pragma once
 #include <ctime>
 #include <iostream>
 #include <string>
 #include <stdio.h>
 #include <time.h>
-
 using namespace std;
-
-
 class devolucion {
 private:
 	int dia;
