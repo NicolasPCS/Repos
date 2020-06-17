@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{A72A960F-F6EE-4053-91B2-1A6898D34A5F}</ProjectGuid>
-    <RootNamespace>SistemaBiblioteca</RootNamespace>
+    <ProjectGuid>{4440880D-E2CA-4DF3-86AF-74C143E70973}</ProjectGuid>
+    <RootNamespace>Devoluciones</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -138,22 +138,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\source\repos\BiblioPractica6\Alumnos.h" />
-    <ClInclude Include="..\..\..\..\source\repos\BiblioPractica6\devolver.h" />
-    <ClInclude Include="..\..\..\..\source\repos\BiblioPractica6\FriendsA.h" />
-    <ClInclude Include="..\..\..\..\source\repos\BiblioPractica6\FriendsL.h" />
-    <ClInclude Include="..\..\..\..\source\repos\BiblioPractica6\Libros.h" />
-    <ClInclude Include="..\..\..\..\source\repos\BiblioPractica6\Persona.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\..\source\repos\BiblioPractica6\Alumnos.cpp" />
-    <ClCompile Include="..\..\..\..\source\repos\BiblioPractica6\devolver.cpp" />
-    <ClCompile Include="..\..\..\..\source\repos\BiblioPractica6\Libros.cpp" />
-    <ClCompile Include="..\..\..\..\source\repos\BiblioPractica6\Persona.cpp" />
-    <ClCompile Include="..\..\..\..\source\repos\BiblioPractica6\Source.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
