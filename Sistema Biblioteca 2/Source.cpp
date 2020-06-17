@@ -125,13 +125,43 @@ int main() {
             break;
         }
         case 6:
+        {
+            // Realizamos el prestamo de un libro a un estudiante, para ello solo se ingresa el codigo del libro
+            // y el ID del estudiante
+            int codigo = 0;
+            int idAlPres = 0;
+            cout << "\nIngrese el codigo del libro que va a devolver: "; cin >> codigo;
+            cout << "Ingrese el ID del alumno al que se va a devolver: "; cin >> idAlPres;
+            system("cls");
+            cout << "\nAcontinuacion se muestra los datos del libro y estudiante que va a devolver el libro" << endl;
+            cout << "/////////////////////////////////////////////////////////////////////////////////////////" << endl;
+            for (int i = 0; i < nroLibs; i++) {
+                if (codigo == libros[i].codigo) {
+                    // Hacemos el llamado a la clase amiga de la clase libro
+                    // la cual mostrara los datos de todos los objetos del array libros
+                    // Le enviamos como parametro el objeto y su posicion en el arreglo
+                    amigaMostrarDatoLibros(libros, nroLibs);
+                }
+            }
+            for (int i = 0; i < nroAls; i++) {
+                if (idAlPres == alumnos[i].idAlumno) {
+                    // Hacemos el llamado a la clase amiga de la clase alumno
+                    // la cual mostrara los datos de un libro en una determinada posicion del array alumno
+                    // Le enviamos como parametro el objeto y su posicion en el arreglo
+                    amigaMostrarDatoAlumnos(alumnos, nroAls);
+                }
+            }
+            cout << "/////////////////////////////////////////////////////////////////////////////////////////" << endl;
+            break;
+        }
+        case 7:
             cout << "Saliendo del sistema..." << endl << endl;
             break;
         default:
             cout << "Ingrese una opcion correcta" << endl;
             break;
         }
-    } while (opc != 6);
+    } while (opc != 7);
     system("pause");
     return 0;
 }
@@ -143,6 +173,7 @@ void menu() {
         << "\n\t[3] Ingresar datos de libros"
         << "\n\t[4] Mostrar datos libros"
         << "\n\t[5] Prestar libro"
-        << "\n\t[6] Salir" << endl;
+        << "\n\t[6] Devolver libro"
+        << "\n\t[7] Salir" << endl;
 }
 // Fin del archivo Source.cpp
