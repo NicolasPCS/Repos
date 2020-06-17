@@ -4,13 +4,11 @@ Sector::Sector() {
 	nombreSec = " ";
 	numLibros = 0;
 }
-
 void Sector::ingresarSector() {
-	cout << "\tIngresar nombre de sector: "; cin >> nombreSec;
-	cout << "\tNumero de libros en sector: "; cin >> numLibros;
+	cout << "\t(S)Ingresar nombre de sector: "; cin >> nombreSec;
+	cout << "\t(S)Numero de libros en sector: "; cin >> numLibros;
 }
-
 void Sector::mostrarSector() {
-	cout << "\tNombre del sector: " << nombreSec << endl;
-	cout << "\tCantidad libros en sector: " << numLibros << endl;
+	cout << "\t(S)Nombre del sector: " << nombreSec << endl;
+	cout << "\t(S)Cantidad libros en sector: " << numLibros << endl;
 }

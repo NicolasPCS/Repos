@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string>
 #include "Libros.h"
+#include "Sector.h"
 using namespace std;
 // Creamos el cuerpo de la funcion amiga, la cual muestra
 // los datos de un objeto
@@ -25,6 +26,9 @@ inline void amigaMostrarDatoLibros(Libro* l, int n) {
 ostream& operator<<(ostream& out, Libro& Libro) {
     out << "\n====== Datos del Libro ======\n";
     out << "\n\tCodigo: " << Libro.codigo << endl;
+    // Hacemos el llamado al metodo ingresarSector() de la clase base
+    // Sector, al ser un metodo public puede ser accedido desde la clase derivada
+    Libro.mostrarSector();
     out << "\tTitulo: " << Libro.tituloLibro << endl;
     out << "\tGenero: " << Libro.genero << endl;
     out << "\tAutor: " << Libro.autor << endl;
@@ -36,6 +40,9 @@ ostream& operator<<(ostream& out, Libro& Libro) {
 istream& operator>>(istream& in, Libro& Libro) {
     cout << "\n====== Ingresar datos del Libro ======\n";
     cout << "\n\tCodigo: "; in.ignore(); in >> Libro.codigo;
+    // Hacemos el llamado al metodo mostrarSector() de la clase base
+    // Sector, al ser un metodo public puede ser accedido desde la clase derivada
+    Libro.ingresarSector();
     cout << "\tTitulo: "; in.ignore(); std::getline(in, Libro.tituloLibro);
     cout << "\tGenero: "; std::getline(in, Libro.genero);
     cout << "\tAutor: "; std::getline(in, Libro.autor);

@@ -19,9 +19,9 @@ using namespace std;
 // los datos de los libros
 void Alumno::ingresarDatosAl() {
     cout << "\n====== Ingresar datos de Alumno ======\n";
+    cout << "\tID del Alumno: "; cin.ignore(); cin >> this->idAlumno;
     // Hacemos el llamado al metodo ingresarDatosPersona() de la clase base
     // Persona, al ser un metodo public puede ser accedido desde la clase derivada
-    cout << "\tID del Alumno: "; cin.ignore(); cin >> this->idAlumno;
     ingresarDatosPersona();
     cout << "\tNombre: "; cin.ignore(); std::getline(cin, this->nombre);
     cout << "\tApellido: "; cin.ignore(); std::getline(cin, this->apellido);
@@ -31,9 +31,9 @@ void Alumno::ingresarDatosAl() {
 }
 void Alumno::mostrarDatosAl() {
     cout << "\n========= Datos Alumno =========\n";
+    cout << "\tID del alumno: " << this->idAlumno << endl;
     // Hacemos el llamado al metodo mostrarDatosPersona() de la clase base
     // Persona, al ser un metodo public puede ser accedido desde la clase derivada
-    cout << "\tID del alumno: " << this->idAlumno << endl;
     mostrarDatosPersona();
     cout << "\tNombre: " << this->nombre << endl;
     cout << "\tApellido: " << this->apellido << endl;
