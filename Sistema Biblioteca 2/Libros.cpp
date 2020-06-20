@@ -7,7 +7,7 @@
 #include <iostream>
 #include "Libros.h"
 using namespace std;
-
+/*
 Libro::Libro() {
 	codigo = 0;
 	tituloLibro = "";
@@ -20,5 +20,5 @@ Libro::Libro() {
 	// no podrian ser accedidos desde la clase derivada)
 	nombreSec = " ";
 	numLibros = 0;
-}
+}*/
 // Fin del archivo Libros.cpp

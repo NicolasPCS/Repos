@@ -2,7 +2,7 @@
 // Código   	: Alumnos.h
 // Autor		: Nicolas
 // Fecha		: 03/06/2020
-// Descripción	: Declaración de la clase Alumno
+// Descripción	: Declaración de la clase derivada Alumno
 /////////////////////////////////////////////////////////////////////////////////
 #pragma once
 #include <iostream>

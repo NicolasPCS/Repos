@@ -2,7 +2,7 @@
 // Código   	: Libros.h
 // Autor		: Nicolas
 // Fecha		: 03/06/2020
-// Descripción	: Declaración de la clase Libro
+// Descripción	: Declaración de la clase derivada Libro
 /////////////////////////////////////////////////////////////////////////////////
 #pragma once
 #include <iostream>
@@ -24,7 +24,20 @@ protected:
 	static int contadorLibros;
 	Alumno* alumnos;
 public:
-	Libro();
+	Libro() : Sector() {
+		codigo = 0;
+		tituloLibro = "";
+		genero = "";
+		numPaginas = 0;
+		idioma = "";
+		autor = "";
+		// Inicializamos valores a los atributos protegidos
+		// de la clase Sector (NOTA: si los atributos fueran privados
+		// no podrian ser accedidos desde la clase derivada)
+		nombreSec = " ";
+		numLibros = 0;
+	}
+	// Declaramos el constructor de la clase Libro como privado 
 	~Libro() = default;
 	int codigo;
 	// Definimos un metodo estatico getContadorAlumnos
