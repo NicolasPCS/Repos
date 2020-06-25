@@ -20,8 +20,8 @@ using namespace std;
 void Alumno::ingresarDatosAl() {
     cout << "\n====== Ingresar datos de Alumno ======\n";
     cout << "\tID del Alumno: "; cin.ignore(); cin >> this->idAlumno;
-    // Hacemos el llamado al metodo ingresarDatosPersona() de la clase base
-    // Persona, al ser un metodo public puede ser accedido desde la clase derivada
+    // Hacemos el llamado al metodo virtual ingresarDatosPersona() de la clase base
+    // Persona definida en esta clase (Alumnos)
     ingresarDatosPersona();
     cout << "\tNombre: "; cin.ignore(); std::getline(cin, this->nombre);
     cout << "\tApellido: "; cin.ignore(); std::getline(cin, this->apellido);
@@ -32,12 +32,26 @@ void Alumno::ingresarDatosAl() {
 void Alumno::mostrarDatosAl() {
     cout << "\n========= Datos Alumno =========\n";
     cout << "\tID del alumno: " << this->idAlumno << endl;
-    // Hacemos el llamado al metodo mostrarDatosPersona() de la clase base
-    // Persona, al ser un metodo public puede ser accedido desde la clase derivada
+    // Hacemos el llamado al metodo virtual mostrarDatosPersona() de la clase base
+    // Persona definida en esta clase (Alumnos)
     mostrarDatosPersona();
     cout << "\tNombre: " << this->nombre << endl;
     cout << "\tApellido: " << this->apellido << endl;
     cout << "\tCodigo: " << this->codigo << endl;
     cout << "\tNum alumno en el sistema: " << Alumno::getContadorAlumnos() << endl << endl;
+}
+
+// Definicion de los metodos virtuales de la clase base Personas en la clase derivada
+// alumno
+void Alumno::ingresarDatosPersona() {
+    cout << "\n\t(P)DNI: "; cin.ignore(); std::getline(cin, this->dni);
+    cout << "\t(P)Edad: "; cin.ignore(); std::getline(cin, this->edad);
+    cout << "\t(P)Estado civil: "; cin.ignore(); std::getline(cin, this->eCivil);
+}
+
+void Alumno::mostrarDatosPersona() {
+    cout << "\n\t(P)DNI: " << this->dni << endl;
+    cout << "\t(P)Edad: " << this->edad << endl;
+    cout << "\t(P)Estado civil: " << this->eCivil << endl;
 }
 // Fin del archivo Alumnos.cpp
