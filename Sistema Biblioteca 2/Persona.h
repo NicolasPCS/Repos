@@ -21,8 +21,8 @@ public:
 	virtual ~Persona() = default;
 
 	// Declaracion de los metodos virtuales ingresar() y mostrar()
-	void ingresar();
-	void mostrar();
+	virtual void ingresar();
+	virtual void mostrar();
 };
 
 
