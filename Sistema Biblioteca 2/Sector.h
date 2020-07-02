@@ -16,5 +16,12 @@ public:
 	~Sector() = default;
 	void ingresarSector();
 	void mostrarSector();
+
+	// si una clase tiene al menos una funcion virtual pura, entonces esa clase 
+	// se dice que es "abstracta"
+	// Definición del metodo virtual puro mostrarSector()
+
+
+	
 };
 

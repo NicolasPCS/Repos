@@ -1,72 +1,110 @@
 #include <iostream>
 using namespace std;
 
-// Primer nivel
+// PRIMER NIVEL
 class Vehiculo {
 public:
 	//metodo virtual de Vehiculo
-	virtual void abordar() { cout << "Sube al vehiculo"; }
+	virtual void abordar() { cout << "Sube al vehiculo" << endl; }
 	//metodo normal de vehiculo
-	void arrancar() { cout << "Encender motor y liberar freno"; }
+	void arrancar() { cout << "Encender motor y liberar freno" << endl; }
 };
 
-// Segundo nivel
-class VehiculoAereo : public Vehiculo {
-	//Metodo virtual implementado
-	void abordar() { cout << "Subir a vehiculo Aereo"; }
-};
+// SEGUNDO NIVEL
+class VehiculoAereo : public Vehiculo {};
+class VehiculoTerrestre : public Vehiculo {};
+class VehiculoAcuatico : public Vehiculo {};
 
-class VehiculoTerrestre : public Vehiculo {
+// TERCER NIVEL
+class VehiculoTerrestreCarga : public VehiculoTerrestre {};
+class VehiculoTerrestrePasajeros : public VehiculoTerrestre {};
+class VehiculoAcuaticoRecreo : public VehiculoAcuatico {};
 
-	//Metodo virtual implementado
-	void abordar() { cout << "Subir a vehiculo Terrestre"; }
-};
-
-class VehiculoAcuatico : public Vehiculo {
-	//Metodo virtual implementado
-	void abordar() { cout << "Subir a vehiculo Acuatico"; }
-	//Metodo normal propio de clase VehiculoAcuatico
-	//ahmm si igual lo va heredar... solo que la invocacion podemos usar el metodo heredado como
-	//tamnien el propio metodo de esta class derivada dependea q metodo se llame...sip
-	//ahmm nose que dicen? creo que si se pone o no igual el metodo arrancar no nos da polimorfismo 
-	//ayaappp osea el metodo normal de vehiculo no tonces?... ahh en ese caso esta bien haha borremos arrancar en ese casso 
-	//Sip, 
-	//ahh si? que mas escuchaste?? yaya
-	
-	// solo eso pude escuchar.... :v
-	// si...un vehículo acuatico y 2 vehiculos aereos
-	// me acuerdo que debemos agregar clases 3 clases más en el tercer nivel y posteriormente 3 clases que deriven de estas.
-	// escuche del inge. que el segundo nivel no se implementa metodos, que solo sirve de herencia, algo asi
-};
-
-// Tercer nivel
-class VehiculoTerrestreCarga : public VehiculoTerrestre {
-	//Metodo virtual implementado
-	void abordar() { cout << "Subir carga a vehiculo Terrestre Carga"; }
-};
-
-class VehiculoTerrestrePasajeros : public VehiculoTerrestre {
-	//Metodo virtual implementado
-	void abordar() { cout << "Subir pasajeros a vehiculo Terrestre y tomar asientos"; }
-};
-
-class VehiculoAcuaticoRecreo : public VehiculoAcuatico {
-	//Metodo virtual implementado
-	void abordar() { cout << "Subir pasajeros a vehiculo Acutico Recreacional y tomar asientos"; }
-};
-
-// Cuarto nivel
+// CUARTO NIVEL
 class Camion : public VehiculoTerrestreCarga {
 	//Metodo virtual implementado
-	void abordar() { cout << "Subir carga a camion"; }
+	void abordar() { cout << "Subir carga a camion" << endl; }
+	void arrancar() { cout << "Encender motor, se pone primera, se direcciona timón y liberar freno" << endl; }
 };
 
+class Furgoneta : public VehiculoTerrestreCarga {
+	//Metodo virtual implementado
+	void abordar() { cout << "Almacenar mercancías a la furgoneta" << endl; }
+	void arrancar() { cout << "Mover palanca de cambios a 'Neutro', se enciende el motor, se dirreciona el timón y se libera el freno de mano" << endl; }
+};
+
+// Dos clases derivadas del tercer nivel, clase VehiculoTerrestrePasajeros
 class Bus : public VehiculoTerrestrePasajeros {
 	//Metodo virtual implementado
-	void abordar() { cout << "Subir a bus y tomar asientos"; }
+	void abordar() { cout << "Subir a bus y tomar asiento" << endl; }
+	void arrancar() { cout << "Encender interruptor de alimentación principal, se mueve la palanca de cambios a 'Neutro', se enciende el motor, se dirreciona el timón y se libera el freno de mano" << endl; }
 };
-//aqui va aver arrancar?
+
+class Combi : public VehiculoTerrestrePasajeros {
+	void abordar() { cout << "Subir a combi y, tomar asiento o quedarse parado" << endl; }
+	void arrancar() { cout << "Mover la palanca de cambios a 'Neutro', se enciende el motor, se dirreciona el timón y se libera el freno de mano" << endl; }
+};
+
+// Dos clases derivadas del tercer nivel, clase VehiculoAcuaticoRecreo
 class Yate : public VehiculoAcuaticoRecreo {
 	//Metodo virtual implementado
-	void abordar() { "Subir al yate y ponerse bloqueador"; }
+	void abordar() { cout << "Subir al yate y ponerse bloqueador" << endl; }
+	void arrancar() { cout << "Otorgar fluido eléctrico al yate, se enciende los motores, se mantiene la palanca de mando en 'Neutro' y bajan los motores al agua" << endl; }
 };
+
+class MotoAcuatica : public VehiculoAcuaticoRecreo {
+	void abordar() { cout << "Subir a la moto acuática, ponerse bloqueador y encontrar una posición cómoda para sentarse" << endl; }
+	void arrancar() { cout << "Colocar una llave particular en una cerradura, se enciende el motor y se presiona el acelerador" << endl; }
+};
+
+#include <iostream>
+#include <string>
+using namespace std;
+//declaracion de funcion arrancarV
+void arrancarV(Vehiculo* v);
+int main() {
+	int n = 0, m = 0;
+	cout << "ingresar opc de vehiculo: ";
+	cin >> n;
+	Vehiculo** Vehiculos2 = new Vehiculo * [n];
+	//5.b Crear un bloque de código con una rutina para agregar
+	//las direcciones de objetos de las clases del programa que hemos modelado.
+	/*for (int i = 0; i < n; i++) {
+		arrancarV(Vehiculos2[i]);
+		break;
+	}*/
+
+	for (int i = 0; i < n; i++)
+	{
+		string nombre;
+		cout << "ingresar vehiculo: "; cin >> m;
+		cout << "Ingrese nombre: "; cin.ignore(); getline(cin, nombre);
+		switch (m)
+		{
+			// alojar objetos de clases derivadas en el arreglo de punteros de clase base
+		case 1: Vehiculos2[i] = new Camion; break;
+		case 2: Vehiculos2[i] = new Furgoneta; break;
+		case 3: Vehiculos2[i] = new Bus; break;
+		case 4: Vehiculos2[i] = new Yate; break;
+		case 5: Vehiculos2[i] = new MotoAcuatica; break;
+		case 6: Vehiculos2[i] = new Combi; break;
+		}
+	}
+
+	cout << "Vehiculos: " << endl;
+	for (int i = 0; i < n; i++)
+	{
+		// 5. c) ejecutar polimorficamente los métodos con virtual en el arreglo de objetos
+		Vehiculos2[i]->arrancar();
+		Vehiculos2[i]->abordar();
+	}
+
+
+	system("pause");
+	return 0;
+}
+//desarrollo de funcion arrancarV
+void arrancarV(Vehiculo* v) {
+
+	v->arrancar();
+} //Fin de funcion arrancarV

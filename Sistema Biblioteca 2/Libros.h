@@ -59,5 +59,8 @@ public:
 	// de entrada y salida de datos en la clase Libro
 	friend ostream& operator<<(ostream&, Libro&);
 	friend istream& operator>>(istream&, Libro&);
+
+	// Redeclaracion mel metodo virtual puro de la clase base Sector
+	// void mostrarSector();
 };
 // Fin del archivo Libros.h

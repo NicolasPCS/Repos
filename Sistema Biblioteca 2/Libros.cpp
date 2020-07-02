@@ -22,3 +22,10 @@ Libro::Libro() {
 	numLibros = 0;
 }*/
 // Fin del archivo Libros.cpp
+
+// Definicion del metodo virtual puro de la clase base Sector en la clase derivada
+// Libros
+/*void Libro::mostrarSector() {
+	cout << "\t(S)Nombre del sector: " << nombreSec << endl;
+	cout << "\t(S)Cantidad libros en sector: " << numLibros << endl;
+}*/
