@@ -15,32 +15,34 @@ using namespace std;
     apellido = " ";
     codigo = " ";
 }*/
-// Creamos el cuerpo de los metodos para ingresar y mostrar
-// los datos de los libros
-void Alumno::ingresarDatosAl() {
+
+// Definición de los metodos ingresa() y mostrar(), mismos de la clase
+// base persona
+void Alumno::ingresar() {
     cout << "\n====== Ingresar datos de Alumno ======\n";
     cout << "\tID del Alumno: "; cin.ignore(); cin >> this->idAlumno;
-    // Hacemos el llamado al metodo virtual ingresarDatosPersona() de la clase base
-    // Persona definida en esta clase (Alumnos)
-    ingresarDatosPersona();
+    // Invocamos al método ingresar() da la clase base Persona con la intención
+    // de aplicar refinamiento
+    Persona::ingresar();
     cout << "\tNombre: "; cin.ignore(); std::getline(cin, this->nombre);
     cout << "\tApellido: "; cin.ignore(); std::getline(cin, this->apellido);
     cout << "\tCodigo: "; cin.ignore(); cin >> this->codigo;
     Alumno::setContadorAlumnos();
     cout << endl;
 }
-void Alumno::mostrarDatosAl() {
+void Alumno::mostrar() {
     cout << "\n========= Datos Alumno =========\n";
     cout << "\tID del alumno: " << this->idAlumno << endl;
-    // Hacemos el llamado al metodo virtual mostrarDatosPersona() de la clase base
-    // Persona definida en esta clase (Alumnos)
-    mostrarDatosPersona();
+    // Invocamos al método mostrar() da la clase base Persona con la intención
+    // de aplicar refinamiento
+    Persona::mostrar();
     cout << "\tNombre: " << this->nombre << endl;
     cout << "\tApellido: " << this->apellido << endl;
     cout << "\tCodigo: " << this->codigo << endl;
     cout << "\tNum alumno en el sistema: " << Alumno::getContadorAlumnos() << endl << endl;
 }
 
+/*
 // Definicion de los metodos virtuales de la clase base Personas en la clase derivada
 // alumno
 void Alumno::ingresarDatosPersona() {
@@ -54,4 +56,5 @@ void Alumno::mostrarDatosPersona() {
     cout << "\t(P)Edad: " << this->edad << endl;
     cout << "\t(P)Estado civil: " << this->eCivil << endl;
 }
+*/
 // Fin del archivo Alumnos.cpp

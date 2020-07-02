@@ -39,8 +39,11 @@ public:
     // primero se ejecuta el destructor de la clase derivada Alumno, y 
     // despues el destructor de la clase base Persona)
     ~Alumno() = default;
-    void ingresarDatosAl();
-    void mostrarDatosAl();
+
+    // Declaración de los metodos ingresar y mostrar(), mismos de la
+    // clase base Persona
+    void ingresar();
+    void mostrar();
 
     // Definimos un metodo estatico getContadorAlumnos
     // el cual solo podra acceder a los atributos
@@ -66,7 +69,7 @@ public:
     friend istream& operator>>(istream&, Alumno&);
 
     // funcion pura redeclarada en la clase derivada Alumno
-    void ingresarDatosPersona();
-    void mostrarDatosPersona();
+    // void ingresarDatosPersona();
+    // void mostrarDatosPersona();
 };
 // Fin del archivo Alumno.h

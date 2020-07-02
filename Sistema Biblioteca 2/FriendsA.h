@@ -18,7 +18,7 @@ using namespace std;
 // llamadas cuando se haga el llamado a dicha funcion
 inline void amigaMostrarDatoAlumnos(Alumno* a, int n) {
     for (int i = 0; i < n; i++) {
-        a[i].mostrarDatosAl();
+        a[i].mostrar();
     }
 }
 ostream& operator<<(ostream& out, Alumno& alumno) { return out; }

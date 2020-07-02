@@ -26,7 +26,7 @@ int main() {
     Alumno* alumnos = NULL;
     alumnos = new Alumno[nroAls];
     // Creamos un array estatico de la clase Libro, que almacenara objetos
-    // con los datos de los libros ingresados por teclado
+    // con los datos de los libros ingresados por tecladoingresarDatosAl
     Libro libros[nroLibs] = {};
     do {
         cout << "===============================================" << endl;
@@ -38,7 +38,7 @@ int main() {
             for (int i = 0; i < nroAls; i++)
                 // Ingresamos datos de alumnos al objeto en el arreglo dinámico, en una
                 // posicion determinada
-                alumnos[i].ingresarDatosAl();
+                alumnos[i].ingresar();
             break;
         case 2:
         {
@@ -49,7 +49,7 @@ int main() {
             if (opcion == 1) {
                 for (int i = 0; i < nroAls; i++)
                     // Mostramos los datos de todos los alumnos en el arreglo dinámico
-                    alumnos[i].mostrarDatosAl();
+                    alumnos[i].mostrar();
             }
             else if (opcion == 2) {
                 cout << "Ingrese el ID del alumno: "; cin >> idAl;
@@ -57,7 +57,7 @@ int main() {
                     if (idAl == alumnos[i].idAlumno) {
                         // Mostramos datos de alumno que se encuentra almacenado en el
                         // arreglo dinámico, en una posicion determinada
-                        alumnos[i].mostrarDatosAl();
+                        alumnos[i].mostrar();
                     }
             }
         }

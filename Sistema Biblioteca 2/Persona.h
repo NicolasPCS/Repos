@@ -20,10 +20,17 @@ public:
 	// como default
 	virtual ~Persona() = default;
 
-	// Declaracion de las funciones virtuales puras, el "=0 la define como pura"
-	virtual void ingresarDatosPersona() = 0;
-	virtual void mostrarDatosPersona() = 0;
+	// Declaracion de los metodos virtuales ingresar() y mostrar()
+	void ingresar();
+	void mostrar();
 };
+
+
+
+
+
+
+
 
 
 /* funciones virtuales puras
