@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Alumno">
-    <Position X="3" Y="3.25" Width="1.5" />
+    <Position X="4.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAIQAQAAACAAABAAAAAQAAABBQAAAAAAABAAAQ=</HashCode>
+      <HashCode>AAABAAAIQAQAAACEAAAgAAAAQAAABBQAAAAAAABAAAA=</HashCode>
       <FileName>Alumnos.h</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -11,7 +11,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Libro">
-    <Position X="8.75" Y="3.25" Width="1.5" />
+    <Position X="8.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABABAAAAAAAACAAAAAIAgAAAEKAEAAAAIAAAEIAAA=</HashCode>
       <FileName>Libros.h</FileName>
@@ -23,15 +23,22 @@
   <Class Name="Persona">
     <Position X="5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAJAAAAAAAAAgBAAAAAAAAAAAAgAAIEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAABAAAAAAAEAgBgAAAAAAAAAAAAAAIEAAAAAAA=</HashCode>
       <FileName>Persona.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sector">
     <Position X="6.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAACAAAAAAAAAAAAAABAAAAAAAAEAAACA=</HashCode>
+      <HashCode>AAAAAAAACAAAACAAAAAAAAAAAAAABBAAAAAAAEAAACA=</HashCode>
       <FileName>Sector.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="alumnoIntercambio">
+    <Position X="6" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAQAAACEAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>aIntercambio.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
