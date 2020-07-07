@@ -2,7 +2,7 @@
 // Codigo			: cnumero.cpp
 // Autor			:
 // Fecha			: 06/06/2020
-// DEscripcion	: definición de métodos de la clase CNumero que abstrae las operaciones de suma y resta
+// DEscripcion		: definición de métodos de la clase CNumero que abstrae las operaciones de suma y resta
 /////////////////////////////////////////////////////////////////////////////////////
 #include "cnumero.h"
 #include <iostream>
