@@ -5,6 +5,7 @@
 // Descripción	: Declaracion de la clase base Persona
 /////////////////////////////////////////////////////////////////////////////////
 #pragma once
+#include "Fecha.h"
 #include <iostream>
 using namespace std;
 
@@ -13,6 +14,7 @@ protected:
 	string dni;
 	string edad;
 	string eCivil;
+	Fecha<int> fecha;
 public:
 	Persona();
 
@@ -37,7 +39,7 @@ public:
 una funcion virtual pura, es aquella que se declara en la clase base, pero que
 no se define y que obliga a las clases derivadas a definirla
 
-al no tener definicion, no es posible usar la funcion en la clase base. unicamenten en las clases derivadas, 
+al no tener definicion, no es posible usar la funcion en la clase base. unicamenten en las clases derivadas,
 que es donde se encuentra definida
 
 si una clase tiene al menos una funcion virtual pura, entonces esa clase se dice que es

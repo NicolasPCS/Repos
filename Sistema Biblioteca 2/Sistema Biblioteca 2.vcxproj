@@ -140,6 +140,7 @@
   <ItemGroup>
     <ClCompile Include="aIntercambio.cpp" />
     <ClCompile Include="Alumnos.cpp" />
+    <ClCompile Include="Fecha.cpp" />
     <ClCompile Include="Libros.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="Sector.cpp" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="aIntercambio.h" />
     <ClInclude Include="Alumnos.h" />
+    <ClInclude Include="Fecha.h" />
     <ClInclude Include="FriendsA.h" />
     <ClInclude Include="FriendsL.h" />
     <ClInclude Include="Libros.h" />
