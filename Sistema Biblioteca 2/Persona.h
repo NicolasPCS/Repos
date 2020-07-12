@@ -14,7 +14,7 @@ protected:
 	string dni;
 	string edad;
 	string eCivil;
-	Fecha<int> fecha;
+	Fecha fecha;
 public:
 	Persona();
 

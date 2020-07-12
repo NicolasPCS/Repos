@@ -23,9 +23,12 @@
   <Class Name="Persona">
     <Position X="5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAEAgBgAAAAAAAAAAAAAAIEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAABAQAAAAAEAgBgAAAAAAAAAAAAAAIEAAAAAAA=</HashCode>
       <FileName>Persona.h</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="fecha" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Sector">
     <Position X="6.75" Y="2.25" Width="1.5" />
@@ -39,6 +42,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAQAAACEAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>aIntercambio.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Fecha">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAEEAAAgAQAAAAAAAAJAAAAAAAAAAAA=</HashCode>
+      <FileName>Fecha.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

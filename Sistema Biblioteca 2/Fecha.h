@@ -9,7 +9,7 @@
 using namespace std;
 
 // Creamos un template de clase Fecha, con el identificador F
-template <class F>
+// template <class F>
 class Fecha {
 private:
 	int dia;
@@ -18,6 +18,25 @@ private:
 public:
 	Fecha() = default;
 	~Fecha() = default;
+
+	// Declaración de los templates de métodos ingresar() y mostrar()
+	// de la clase Fecha
+	template <class F>
+	F ingresar(F);
+
+	template <class F>
+	F mostrar(F);
+
+	/*template <class F>
+	F mostrar() {
+		cout << "\n\ttDatos de Nacimiento:" << endl;
+		cout << "\tDia: " << dia << endl;
+		cout << "\tMes: " << mes << endl;
+		cout << "\tAnio: " << anio << endl << endl;
+	}*/
+
+
+	/*
 	// creamos la sobrecarga de operadores de salida y entrada
 	// para el template de Fecha
 	// NOTA: se crea la declaración y definición de las sobrecargas, en el
@@ -38,4 +57,28 @@ public:
 		cout << endl;
 		return e;
 	}
+	*/
 };
+
+// Definición de los templates de métodos ingresar() y mostrar()
+// de la clase Fecha
+template<class F>
+inline F Fecha::ingresar(F)
+{
+	cout << "\n\tDatos de Nacimiento: " << endl;
+	cout << "\tDia: "; cin >> dia;
+	cout << "\tMes: "; cin >> mes;
+	cout << "\tAnio: "; cin >> anio;
+	cout << endl;
+	return F();
+}
+
+template<class F>
+inline F Fecha::mostrar(F)
+{
+	cout << "\n\tDatos de Nacimiento:" << endl;
+	cout << "\tDia: " << dia << endl;
+	cout << "\tMes: " << mes << endl;
+	cout << "\tAnio: " << anio << endl << endl;
+	return F();
+}

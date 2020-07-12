@@ -14,7 +14,7 @@ void alumnoIntercambio::ingresar()
     cout << "\n====== Ingresar datos de Alumno Intercambio======\n";
     cout << "\tNombre: "; cin.ignore(); cin.ignore(); std::getline(cin, this->nombre);
     cout << "\tApellido: "; cin.ignore(); cin.ignore(); std::getline(cin, this->apellido);
-    cout << "\Pais: "; cin.ignore(); cin.ignore(); std::getline(cin, this->pais);
+    cout << "\tPais: "; cin.ignore(); cin.ignore(); std::getline(cin, this->pais);
     cout << endl;
 }
 

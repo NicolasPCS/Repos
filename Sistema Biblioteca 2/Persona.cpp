@@ -21,11 +21,17 @@ void Persona::ingresar() {
 	cout << "\n\t(P)DNI: "; cin.ignore(); std::getline(cin, this->dni);
 	cout << "\t(P)Edad: "; cin.ignore(); std::getline(cin, this->edad);
 	cout << "\t(P)Estado civil: "; cin.ignore(); std::getline(cin, this->eCivil);
-	cin >> fecha;
+	// Hacemos el llamado al metodo ingresar() de la clase Fecha
+	// NOTA: se le envia como parametro "this" para que el tipo de dato haga
+	// referencia al objeto que se esta creando de la clase Fecha
+	fecha.ingresar(this);
 }
 void Persona::mostrar() {
 	cout << "\n\t(P)DNI: " << this->dni << endl;
 	cout << "\t(P)Edad: " << this->edad << endl;
 	cout << "\t(P)Estado civil: " << this->eCivil << endl;
-	cout << fecha;
+	// Hacemos el llamado al metodo mostrar() de la clase Fecha
+	// NOTA: se le envia como parametro "this" para que el tipo de dato haga
+	// referencia al objeto que se esta creando de la clase Fecha
+	fecha.mostrar(this);
 }
