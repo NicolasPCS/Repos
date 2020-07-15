@@ -142,6 +142,7 @@
     <ClCompile Include="Alumnos.cpp" />
     <ClCompile Include="Fecha.cpp" />
     <ClCompile Include="Libros.cpp" />
+    <ClCompile Include="miexcepcion.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="Sector.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -153,6 +154,7 @@
     <ClInclude Include="FriendsA.h" />
     <ClInclude Include="FriendsL.h" />
     <ClInclude Include="Libros.h" />
+    <ClInclude Include="miexcepcion.h" />
     <ClInclude Include="Persona.h" />
     <ClInclude Include="Sector.h" />
   </ItemGroup>

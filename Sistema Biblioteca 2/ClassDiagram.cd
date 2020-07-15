@@ -51,5 +51,12 @@
       <FileName>Fecha.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="GestionExcepciones">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>miexcepcion.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
