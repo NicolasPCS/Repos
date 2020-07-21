@@ -6,12 +6,12 @@ using namespace std;
 // Metodos de la clase abstracta universidad
 void Docente::ingresarU()
 {
-	cout << "Nombre de la universidad: "; cin >> Universidad::nombreU;
+	cout << "\nNombre de la universidad: "; cin >> Universidad::nombreU;
 }
 
 void Docente::mostrarU()
 {
-	cout << "\nNombre de la universidad: " << Universidad::nombreU;
+	cout << "\n\nNombre de la universidad: " << Universidad::nombreU;
 }
 
 // Metodos de la clase Docente

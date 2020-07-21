@@ -15,6 +15,7 @@ int main() {
 	// Declaracion de variables a utilizar
 	int opc = 0;
 	int nroAls = 0;
+	int nroAlsInter = 0;
 	int const nroDoc = 2;
 
 	cout << "El numero de docentes en esta universidad es: " << nroDoc << endl;
@@ -22,7 +23,8 @@ int main() {
 	do {
 		try {
 			cout << "Ingrese el numero de alumnos en esta universidad: "; cin >> nroAls;
-			if (nroAls < 0) {
+			cout << "Ingrese el numero de alumnos en intercambio: "; cin >> nroAlsInter;
+			if (nroAls < 0 || nroAlsInter < 0) {
 				throw(exception)myex;
 			}
 			else {
@@ -39,6 +41,8 @@ int main() {
 	// Array dinamico de la clase Estudiante
 	Estudiante* estudiantes = new Estudiante[nroAls];
 
+	alumnoIntercambio* aInter = new alumnoIntercambio[nroAlsInter];
+
 	// Array estatico de la clase Docente
 	Docente docente[nroDoc] = {};
 
@@ -47,7 +51,7 @@ int main() {
 		menu();
 
 		try {
-			cout << ">>>>>>>>>>>>>>Ingrese una opcion: "; cin >> opc;
+			cout << "\n>>>>>>>>>>>>>>Ingrese una opcion: "; cin >> opc;
 			if (opc < 0) {
 				throw (exception)myex;
 			}
@@ -57,16 +61,22 @@ int main() {
 			else {
 				switch (opc) {
 				case 1:
-					for (int i = 0; i < nroAls; i++)
-						// estudiantes[i].ingresar(); // Metodo de clase base Persona
-
-
-
+					cout << "\nDatos para alumnos de universidad>>>>>>>>>>>>>>" << endl;
+					for (int i = 0; i < nroAls; i++) {
 						estudiantes[i].ingresar(); // Metodo de clase Estudiante
+					}
+					cout << "\n\nDatos para alumnos en intercambio>>>>>>>>>>>>>>" << endl;
+					for (int i = 0; i < nroAlsInter; i++) {
+						aInter[i].ingresar(aInter); // Metodo de clase Estudiante
+					}
 					break;
 				case 2:
+					cout << "\nDatos para alumnos de universidad>>>>>>>>>>>>>>" << endl;
 					for (int i = 0; i < nroAls; i++)
 						estudiantes[i].mostrar();
+					cout << "\n\nDatos para alumnos en intercambio>>>>>>>>>>>>>>" << endl;
+					for (int i = 0; i < nroAlsInter; i++)
+						aInter[i].mostrar(aInter);
 					break;
 				case 3:
 					for (int i = 0; i < nroDoc; i++)

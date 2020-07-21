@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "string"
 #include "Persona.h"
 #include "Universidad.h"
 using namespace std;
@@ -50,6 +51,6 @@ inline A alumnoIntercambio::mostrar(A)
 	Persona::mostrar();
 	cout << "\nCodigo Estudiante: " << codigoEstudiante;
 	cout << "\nPais de procedencia: " << pais;
-	cout << "\nNumero de cursos que cursa: " << cursos;
+	cout << "\nNumero de cursos que cursa: " << cursos << endl << endl;
 	return A();
 }
